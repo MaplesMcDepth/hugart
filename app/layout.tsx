@@ -1,4 +1,5 @@
 import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata = {
   title: 'Hugart - AI Art Remix Playground',
@@ -11,10 +12,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-gray-950 text-white">
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="min-h-screen bg-gray-950 text-white">
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
