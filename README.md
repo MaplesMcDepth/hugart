@@ -1,32 +1,46 @@
 # Hugart
 
-Hugging Face Art Studio - AI-powered image generation and editing tool.
+AI Art Remix Playground
 
-## Status
+## Stack
 
-This project is currently being set up. The workspace structure has been created but source files need to be populated.
+- Next.js 14 + TypeScript
+- Tailwind CSS
+- Clerk Auth
+- Drizzle ORM + Postgres
+- Hugging Face Inference API
+- S3 for image storage
+- Stripe for payments
 
-## Structure
+## Features
 
-```
-src/
-  ai/         - AI model integration (Stable Diffusion, etc.)
-  commands/   - CLI commands and actions
-  engine/     - Core processing engine
-  panels/     - UI panels and components
-  publish/    - Export and publishing tools
-
-dist/
-  ai/         - Compiled AI modules
-  app/        - Application bundle
-  engine/     - Compiled engine
-  panels/     - Compiled UI
-  publish/    - Compiled publishing tools
-```
+- **Character Generator** - Themed AI character creation
+- **Prompt Lab** - Save, fork, and remix prompts
+- **Creative Packs** - Premium themed collections
 
 ## Setup
 
-Coming soon...
+```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.local.example .env.local
+# Edit with your keys
+
+# Run database migrations
+npm run db:migrate
+
+# Start dev server
+npm run dev
+```
+
+## Database Schema
+
+- `users` - Clerk-authenticated users
+- `images` - Generated images with prompts
+- `prompts` - Saved prompts with forking
+- `packs` - Premium creative packs
 
 ## License
 
