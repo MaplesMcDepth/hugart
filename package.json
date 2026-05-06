@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.0",
+    "@huggingface/inference": "^2.0.0",
     "@vercel/postgres": "^0.10.0",
     "drizzle-orm": "^0.40.0",
     "next": "15.3.0",

@@ -1,5 +1,6 @@
 import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 export default async function DashboardPage() {
   const { userId } = await auth()
@@ -17,6 +18,9 @@ export default async function DashboardPage() {
         <div className="bg-gray-900 p-6 rounded-lg">
           <h2 className="text-xl font-semibold mb-2">Generate</h2>
           <p className="text-gray-400">Create new images with AI</p>
+          <Link href="/generate" className="mt-4 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+            Start Generating
+          </Link>
         </div>
         <div className="bg-gray-900 p-6 rounded-lg">
           <h2 className="text-xl font-semibold mb-2">Remix</h2>

@@ -6,7 +6,7 @@ export default async function HomePage() {
   const user = userId ? await currentUser() : null
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black text-white">
       <nav className="flex items-center justify-between p-6">
         <h1 className="text-2xl font-bold">Hugart</h1>
         <div>
